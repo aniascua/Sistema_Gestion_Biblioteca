@@ -8,5 +8,16 @@ class Libro:
         self.genero = genero
         self.cantidad_disponible = cantidad_disponible
 
+    def get_id(self):
+        return self.id_libro
+
     def to_dict(self):
-        return self.__dict__
+        return {
+            'id_libro': self.id_libro,
+            'titulo': self.titulo,
+            'autor': self.autor,
+            'editorial': self.editorial,
+            'ano_publicacion': self.ano_publicacion,
+            'genero': self.genero,
+            'cantidad_disponible': self.cantidad_disponible
+        }

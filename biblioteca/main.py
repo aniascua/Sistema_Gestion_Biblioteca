@@ -2,7 +2,6 @@
 from utils import cargar_datos, guardar_datos, inicializar_datos  # Funciones para manejar archivos JSON e inicializar datos
 from libro import Libro  # Clase para representar libros
 from socio import Socio  # Clase para representar socios
-import os  # Módulo para funciones relacionadas con el sistema operativo
 
 def mostrar_menu():
     """FUNCIÓN PARA MOSTRAR EL MENÚ PRINCIPAL"""
@@ -18,9 +17,10 @@ def mostrar_menu():
     print("9. Listar Libros")
     print("10. Listar Socios")
     print("11. Salir...")
+    print("12. Eliminar Todos los Libros")  # Nueva opción añadida
 
 class Prestamo:
-    contador_id = 0
+    contador_id = 0  # Variable estática para contar los IDs
 
     def __init__(self, id_libro, id_socio, fecha_prestamo, fecha_devolucion=None):
         Prestamo.contador_id += 1
@@ -190,7 +190,7 @@ def registrar_prestamo():
                 print("Préstamo registrado exitosamente!")
                 libro_encontrado = True
             else:
-                print("No hay copias disponibles para préstamo.")
+                print("No hay copias disponibles para préstamo....")
             break
 
     if not libro_encontrado:
@@ -237,7 +237,7 @@ def listar_libros():
         for libro in libros:
             print(f"ID: {libro['id_libro']}, Título: {libro['titulo']}, Autor: {libro['autor']}, Editorial: {libro['editorial']}, Año: {libro['ano_publicacion']}, Género: {libro['genero']}, Disponible: {libro['cantidad_disponible']}")
     else:
-        print("No hay libros registrados.")
+        print("No hay libros registrados..!")
 
 # 10. Listar Socios
 def listar_socios():
@@ -247,7 +247,17 @@ def listar_socios():
         for socio in socios:
             print(f"ID: {socio['id_socio']}, Nombre: {socio['nombre']}, Dirección: {socio['direccion']}, Teléfono: {socio['telefono']}")
     else:
-        print("No hay socios registrados.")
+        print("No hay socios registrados..!")
+
+# 11. Eliminar Todos los Libros
+def eliminar_todos_libros():
+    """FUNCIÓN PARA ELIMINAR TODOS LOS LIBROS DEL SISTEMA"""
+    libros = []  # Creamos una lista vacía para almacenar los libros
+    
+    # Guardamos la lista vacía de libros en el archivo JSON
+    guardar_datos('data/libros.json', libros)
+    
+    print("Se eliminaron todos los libros del sistema...")
 
 # FUNCION PRINCIPAL
 def main():
@@ -280,8 +290,10 @@ def main():
         elif opcion == '11':
             print("Saliendo del sistema... Gracias!")
             break
+        elif opcion == '12':
+            eliminar_todos_libros()
         else:
-            print("Opción no válida. Intente nuevamente...")
+            print("Opción no válida. Intentá nuevamente...")
 
 if __name__ == "__main__":
     main()
