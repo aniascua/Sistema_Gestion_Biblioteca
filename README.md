@@ -54,8 +54,8 @@ Todo esto se realiza a través de un menú que se actualiza según las acciones 
 
 Como parte del trabajo final, se incluye una funcionalidad extra del software a criterio del alumno/grupo. Esto puede incluir el desarrollo de una interfaz gráfica, consumo de una API externa, implementación de búsquedas avanzadas, o cualquier otra funcionalidad que aporte valor agregado al sistema.
 
-### FUNCIONALIDAD ELEGIDA -> NUEVA OPCIÓN EN EL MENÚ:
-### ELIMINAR TODOS LOS LIBROS.
+### FUNCIONALIDAD ELEGIDA -> NUEVA OPCIÓN EN EL MENÚ: 
+**ELIMINAR TODOS LOS LIBROS.**
 Esta opción le permite al usuario borrar todos los libros de la lista de una sola vez y volver a empezar más rápido por si no quiere borrar los libros de a uno
 
 ## Uso del Sistema
