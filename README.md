@@ -59,8 +59,11 @@ Como parte del trabajo final, se incluye una funcionalidad extra del software a 
 Esta opción le permite al usuario borrar todos los libros de la lista de una sola vez y volver a empezar más rápido por si no quiere borrar los libros de a uno
 
 ## Uso del Sistema
+Para ejecutar el sistema en tu PC, seguí estos pasos:
 
-Para ejecutar el sistema en tu entorno local, sigue estos pasos:
-
-1. Clona el repositorio desde GitHub: (terminar esta parte)
-
+1. Cloná el repositorio desde GitHub o GitHub Desktop
+2. Abrí la carpeta del repositorio en tu Visual Studio Code o IDE de preferencia
+3. Abrí una Terminal en el IDE
+4. Escribí el siguiente comando y darle Enter:
+```bash
+   python main.py
