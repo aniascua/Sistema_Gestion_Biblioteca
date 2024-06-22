@@ -20,16 +20,18 @@ def mostrar_menu():
     print("12. Eliminar Todos los Libros")  # Nueva opción añadida
 
 class Prestamo:
-    contador_id = 0  # Variable estática para contar los IDs
+    contador_id = 0  # VARIABLE ESTÁTICA QUE INICIALIZA EN 0 PARA CONTAR LOS IDs (asignará IDs únicos a cada instancia de préstamo)
+    
 
-    def __init__(self, id_libro, id_socio, fecha_prestamo, fecha_devolucion=None):
-        Prestamo.contador_id += 1
-        self.id_prestamo = Prestamo.contador_id
-        self.id_libro = id_libro
+    def __init__(self, id_libro, id_socio, fecha_prestamo, fecha_devolucion=None):  # Constructor de la clase Préstamo
+        Prestamo.contador_id += 1 # Incrementa de 1 en 1, así cada ID será único y se incrementará solo, automáticamente
+        self.id_prestamo = Prestamo.contador_id  # Son los parámetros que se pasan al crear un nuevo objeto Préstamo
+        self.id_libro = id_libro  # Se asignan valores de los parámetros
         self.id_socio = id_socio
         self.fecha_prestamo = fecha_prestamo
         self.fecha_devolucion = fecha_devolucion
 
+    # Método to_dict (to dictionary): Es una función que convierte la información del préstamo en un formato fácil de manejar llamado diccionario
     def to_dict(self):
         return {
             'id_prestamo': self.id_prestamo,
@@ -42,7 +44,8 @@ class Prestamo:
 # 1. Registrar Libro
 def registrar_libro():
     """FUNCIÓN PARA REGISTRAR UN NUEVO LIBRO EN EL SISTEMA"""
-    titulo = input("Título: ")
+    # Le solicitamos al usuario que ingrese mediante teclado el título, autor, editorial, año, género y cantidad
+    titulo = input("Título: ") 
     autor = input("Autor: ")
     editorial = input("Editorial: ")
     ano_publicacion = input("Año de publicación: ")
@@ -56,8 +59,9 @@ def registrar_libro():
     libros = cargar_datos('data/libros.json')
     
     # AGREGAMOS EL NUEVO LIBRO A LA LISTA DE LIBROS Y GUARDAMOS LOS DATOS ACTUALIZADOS 
-    libros.append(libro.to_dict())
-    guardar_datos('data/libros.json', libros)
+    # Usamos 'append' para agregar el libro nuevo a la lista de libros, usa to_dict para convertirlo en un diccionario y facilitar la manipulación de los objetos (libros)
+    libros.append(libro.to_dict())  # Append() -> añade un elemento al final de la lista 
+    guardar_datos('data/libros.json', libros)  # -> Guarda la lista actualizada de libros de vuelta en un archivo JSON 
     
     # MOSTRAMOS POR PANTALLA QUE EL LIBRO SE REGISTRÓ EXITOSAMENTE
     print("Libro registrado exitosamente!")
@@ -66,9 +70,10 @@ def registrar_libro():
 def editar_libro():
     """FUNCION PARA EDITAR UN LIBRO EXISTENTE EN EL SISTEMA"""
     id_libro = input("ID del libro a editar: ")
-    libros = cargar_datos('data/libros.json')
+    libros = cargar_datos('data/libros.json')  # Carga los datos en el archivo JSON
     libro_encontrado = False
 
+    # Bucle FOR para buscar libros en Libros, y de esa manera si encuentra el libro mediante el parámetro buscado, permite editarlo por completo
     for libro in libros:
         if libro['id_libro'] == id_libro:
             # MOSTRAMOS LOS DATOS ACTUALES DEL LIBRO Y LE PERMITIMOS AL USUARIO EDITARLOS
@@ -80,19 +85,20 @@ def editar_libro():
             libro['cantidad_disponible'] = int(input(f"Cantidad disponible ({libro['cantidad_disponible']}): ") or libro['cantidad_disponible'])
             libro_encontrado = True
             break
-
+    # Si encuentra el libro, guarda los datos nuevamente en el archivo JSON
     if libro_encontrado:
         # GUARDAMOS LOS DATOS ACTUALIZADOS EN EL ARCHIVO JSON
         guardar_datos('data/libros.json', libros)
         print("Libro editado exitosamente!")
+    # Si no encuentra el libro, muestra por pantalla que el libro no fue encontrado
     else:
         print("Libro no encontrado.")
 
 # 3. Eliminar Libro
 def eliminar_libro():
     """FUNCION PARA ELIMINAR UN LIBRO"""
-    id_libro = input("ID del libro a eliminar: ")
-    libros = cargar_datos('data/libros.json')
+    id_libro = input("ID del libro a eliminar: ")  # El user ingresa el ID del libro que desea eliminar
+    libros = cargar_datos('data/libros.json')  # Y se actualiza nuevamente en el archivo Libros de JSON
     
     # FILTRAMOS LOS LIBROS PARA EXCLUIR EL LIBRO CON EL ID ESPECIFICADO
     libros = [libro for libro in libros if libro['id_libro'] != id_libro]
@@ -196,8 +202,6 @@ def registrar_prestamo():
     if not libro_encontrado:
         print("Libro no encontrado.")
 
-
-
 # 8. Devolver Libro
 def devolver_libro():
     """FUNCION PARA REGISTRAR LA DEVOLUCIÓN DE UN LIBRO"""
@@ -223,7 +227,7 @@ def devolver_libro():
         libros = cargar_datos('data/libros.json')
         for libro in libros:
             if libro['id_libro'] == id_libro:
-                libro['cantidad_disponible'] += 1
+                libro['cantidad_disponible'] += 1   # Incrementa en 1 porque el libro fue devuelto al stock anterior 
                 break
 
         guardar_datos('data/libros.json', libros)
@@ -234,12 +238,13 @@ def devolver_libro():
 # 9. Listar Libros
 def listar_libros():
     """FUNCIÓN PARA LISTAR TODOS LOS LIBROS DISPONIBLES EN EL SISTEMA"""
-    libros = cargar_datos('data/libros.json')
-    if libros:
-        for libro in libros:
+    libros = cargar_datos('data/libros.json')  # Carga los datos de libros desde un archivo JSON
+    if libros:  # Verifica si hay libros cargados o no
+        for libro in libros:  # Itera sobre cada libro en la lista de libros
+            # Imprime los detalles de cada libro formateados
             print(f"ID: {libro['id_libro']}, Título: {libro['titulo']}, Autor: {libro['autor']}, Editorial: {libro['editorial']}, Año: {libro['ano_publicacion']}, Género: {libro['genero']}, Disponible: {libro['cantidad_disponible']}")
-    else:
-        print("No hay libros registrados..!")
+    else:  # Si no hay libros cargados...
+        print("No hay libros registrados..!")  # Imprime un mensaje por pantalla indicando que no hay libros registrados
 
 # 10. Listar Socios
 def listar_socios():
@@ -292,7 +297,7 @@ def main():
         elif opcion == '11':
             print("Saliendo del sistema... Gracias!")
             break
-        elif opcion == '12':
+        elif opcion == '12':  # -> Esta es la funcionalidad extra que agregué para borrar todos los libros de un plumazo
             eliminar_todos_libros()
         else:
             print("Opción no válida. Intentá nuevamente...")

@@ -42,7 +42,8 @@ Todo esto se realiza a través de un menú que se actualiza según las acciones 
 ### Características del Software
 
 - **Almacenamiento de Información:** Utilización de archivos JSON para almacenar los datos solicitados.
-- **Interfaces de Usuario Interactivas:** Permiten:
+- **Interfaces de Usuario Interactivas:** 
+Permiten:
   - Registrar, editar y eliminar libros.
   - Registrar, editar y eliminar socios.
   - Registrar préstamos y devoluciones.
