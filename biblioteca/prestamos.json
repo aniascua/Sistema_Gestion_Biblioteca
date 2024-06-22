@@ -1,0 +1,14 @@
+[
+    {
+        "id_libro": 1,
+        "id_socio": 1,
+        "fecha_prestamo": "22-06-2024",
+        "fecha_devolucion": null
+    },
+    {
+        "id_prestamo": 1,
+        "id_libro": 1,
+        "id_socio": 2,
+        "fecha_prestamo": "2024-06-22"
+    }
+]

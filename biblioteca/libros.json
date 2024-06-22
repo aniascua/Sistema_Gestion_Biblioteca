@@ -1,0 +1,20 @@
+[
+    {
+        "id_libro": 1,
+        "titulo": "Scream",
+        "autor": "Campbell",
+        "editorial": "Slasher",
+        "a\u00f1o_publicacion": 2018,
+        "genero": "Terror",
+        "cantidad_disponible": 200
+    },
+    {
+        "id_libro": 2,
+        "titulo": "Terrifier",
+        "autor": "Clown",
+        "editorial": "Slasher",
+        "a\u00f1o_publicacion": 2018,
+        "genero": "Terror",
+        "cantidad_disponible": 10
+    }
+]

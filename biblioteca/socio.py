@@ -1,19 +1,23 @@
-class Socio:  # Define una nueva clase llamada Socio
-    contador_id = 0  # Variable estática para contar los IDs
+class Socio:
+    contador_id = 0
 
-    def __init__(self, nombre, direccion, telefono):
-        # Método constructor para inicializar una nueva instancia de Socio
-        Socio.contador_id += 1  # Incrementa el contador de IDs
-        self.id_socio = str(Socio.contador_id)  # Asigna un ID único al socio y lo convierte a cadena
-        self.nombre = nombre  # Asigna el nombre del socio
-        self.direccion = direccion  # Asigna la dirección del socio
-        self.telefono = telefono  # Asigna el teléfono del socio
+    def __init__(self, nombre, apellido, fecha_nacimiento, direccion, correo_electronico, telefono):
+        Socio.contador_id += 1
+        self.id_socio = str(Socio.contador_id)
+        self.nombre = nombre
+        self.apellido = apellido
+        self.fecha_nacimiento = fecha_nacimiento
+        self.direccion = direccion
+        self.correo_electronico = correo_electronico
+        self.telefono = telefono
 
     def to_dict(self):
-        # Método que devuelve un diccionario con los atributos del socio
         return {
-            'id_socio': self.id_socio,  # Incluye el ID del socio en el diccionario
-            'nombre': self.nombre,  # Incluye el nombre del socio en el diccionario
-            'direccion': self.direccion,  # Incluye la dirección del socio en el diccionario
-            'telefono': self.telefono  # Incluye el teléfono del socio en el diccionario
+            'id_socio': self.id_socio,
+            'nombre': self.nombre,
+            'apellido': self.apellido,
+            'fecha_nacimiento': self.fecha_nacimiento,
+            'direccion': self.direccion,
+            'correo_electronico': self.correo_electronico,
+            'telefono': self.telefono
         }
