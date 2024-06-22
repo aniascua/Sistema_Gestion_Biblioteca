@@ -1,6 +1,9 @@
 class Libro:
-    def __init__(self, id_libro, titulo, autor, editorial, ano_publicacion, genero, cantidad_disponible):
-        self.id_libro = id_libro
+    contador_id = 0  # Variable estática para contar los IDs
+
+    def __init__(self, titulo, autor, editorial, ano_publicacion, genero, cantidad_disponible):
+        Libro.contador_id += 1
+        self.id_libro = Libro.contador_id
         self.titulo = titulo
         self.autor = autor
         self.editorial = editorial
