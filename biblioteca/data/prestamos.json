@@ -1,0 +1,51 @@
+[
+    {
+        "id_prestamo": "02340",
+        "id_libro": "02",
+        "id_socio": "01",
+        "fecha_prestamo": "22/10/1995",
+        "fecha_devolucion": null
+    },
+    {
+        "id_prestamo": "02",
+        "id_libro": "02",
+        "id_socio": "02",
+        "fecha_prestamo": "22-10-2023",
+        "fecha_devolucion": null
+    },
+    {
+        "id_prestamo": "01",
+        "id_libro": "01",
+        "id_socio": "01",
+        "fecha_prestamo": "22-10-2024",
+        "fecha_devolucion": null
+    },
+    {
+        "id_prestamo": "1",
+        "id_libro": "1",
+        "id_socio": "02",
+        "fecha_prestamo": "22-06-2024",
+        "fecha_devolucion": null
+    },
+    {
+        "id_prestamo": "1",
+        "id_libro": "1",
+        "id_socio": "02",
+        "fecha_prestamo": "21-06-2024",
+        "fecha_devolucion": null
+    },
+    {
+        "id_prestamo": "1",
+        "id_libro": "1",
+        "id_socio": "01",
+        "fecha_prestamo": "22-6-2024",
+        "fecha_devolucion": null
+    },
+    {
+        "id_prestamo": "1",
+        "id_libro": "1",
+        "id_socio": "01",
+        "fecha_prestamo": "22-06-2024",
+        "fecha_devolucion": null
+    }
+]

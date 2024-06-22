@@ -1,0 +1,11 @@
+[
+    {
+        "id_libro": "1",
+        "titulo": "SCREAM",
+        "autor": "ANA ASCUA",
+        "editorial": "PEPITOS",
+        "ano_publicacion": "2020",
+        "genero": "SLASHER",
+        "cantidad_disponible": 2
+    }
+]

@@ -1,7 +1,6 @@
 import os
 import json
 
-# Obtener el directorio base absoluto
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def cargar_datos(ruta_relativa):
@@ -11,6 +10,8 @@ def cargar_datos(ruta_relativa):
             return json.load(archivo)
     except FileNotFoundError:
         return []
+    except json.JSONDecodeError:
+        return []
 
 def guardar_datos(ruta_relativa, datos):
     ruta_absoluta = os.path.join(BASE_DIR, ruta_relativa)
@@ -18,7 +19,7 @@ def guardar_datos(ruta_relativa, datos):
         json.dump(datos, archivo, indent=4)
 
 def inicializar_datos():
-    libros = cargar_datos('../data/libros.json')
-    socios = cargar_datos('../data/socios.json')
-    prestamos = cargar_datos('../data/prestamos.json')
+    libros = cargar_datos('data/libros.json')
+    socios = cargar_datos('data/socios.json')
+    prestamos = cargar_datos('data/prestamos.json')
     return libros, socios, prestamos
