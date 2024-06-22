@@ -1,1 +1,29 @@
-[]
+[
+    {
+        "id_libro": "1",
+        "titulo": "libro 1",
+        "autor": "libro 1",
+        "editorial": "libro 1",
+        "ano_publicacion": "2020",
+        "genero": "libro 1",
+        "cantidad_disponible": 0
+    },
+    {
+        "id_libro": "1",
+        "titulo": "ASLKAKF",
+        "autor": "ASFLKALFKAS",
+        "editorial": "SKJLFLSAKFLAS",
+        "ano_publicacion": "2020",
+        "genero": "SALFKALF",
+        "cantidad_disponible": 12322
+    },
+    {
+        "id_libro": "2",
+        "titulo": "ALKDSLAKDKLAFK",
+        "autor": "WIEJRIWEKJF",
+        "editorial": "SDFJSKF",
+        "ano_publicacion": "3424",
+        "genero": "DKJFKS",
+        "cantidad_disponible": 0
+    }
+]

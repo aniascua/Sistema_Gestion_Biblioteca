@@ -42,7 +42,6 @@ class Prestamo:
 # 1. Registrar Libro
 def registrar_libro():
     """FUNCIÓN PARA REGISTRAR UN NUEVO LIBRO EN EL SISTEMA"""
-    id_libro = input("ID del libro: ")
     titulo = input("Título: ")
     autor = input("Autor: ")
     editorial = input("Editorial: ")
@@ -51,7 +50,7 @@ def registrar_libro():
     cantidad_disponible = int(input("Cantidad disponible: "))
 
     # CREAMOS OBJETO "LIBRO" CON LOS DATOS PROPORCIONADOS POR EL USUARIO
-    libro = Libro(id_libro, titulo, autor, editorial, ano_publicacion, genero, cantidad_disponible)
+    libro = Libro(titulo, autor, editorial, ano_publicacion, genero, cantidad_disponible)
     
     # CARGAMOS LOS DATOS ACTUALES DE LOS LIBROS DESDE EL ARCHIVO JSON
     libros = cargar_datos('data/libros.json')
@@ -105,13 +104,12 @@ def eliminar_libro():
 # 4. Registrar Socio
 def registrar_socio():
     """FUNCION PARA REGISTRAR UN NUEVO SOCIO EN EL SISTEMA"""
-    id_socio = input("ID del socio: ")
     nombre = input("Nombre: ")
     direccion = input("Dirección: ")
     telefono = input("Teléfono: ")
 
     # CREAMOS OBJETO "SOCIO" CON LOS DATOS PROPORCIONADOS POR EL USUARIO
-    socio = Socio(id_socio, nombre, direccion, telefono)
+    socio = Socio(nombre, direccion, telefono)
     
     # CARGAMOS LOS DATOS ACTUALES DE LOS SOCIOS DESDE EL ARCHIVO JSON
     socios = cargar_datos('data/socios.json')
@@ -176,25 +174,29 @@ def registrar_prestamo():
         if libro['id_libro'] == id_libro:
             if libro['cantidad_disponible'] > 0:
                 # CREAMOS EL OBJETO Prestamo
-                prestamo = Prestamo(id_prestamo, id_libro, id_socio, fecha_prestamo)
+                prestamo = Prestamo(id_libro, id_socio, fecha_prestamo)
                 # CARGAMOS LOS DATOS ACTUALES DE LOS PRÉSTAMOS DESDE EL ARCHIVO JSON
                 prestamos = cargar_datos('data/prestamos.json')
                 # AGREGAMOS EL NUEVO PRÉSTAMO A LA LISTA DE PRÉSTAMOS Y GUARDAMOS LOS DATOS ACTUALIZADOS
                 prestamos.append(prestamo.to_dict())
                 guardar_datos('data/prestamos.json', prestamos)
                 
-                # ACTUALIZAMOS LA CANTIDAD DISPONIBLE DEL LIBRO
+                # ACTUALIZAMOS LA CANTIDAD DISPONIBLE DEL LIBRO EN MEMORIA
                 libro['cantidad_disponible'] -= 1
+                libro_encontrado = True
+                
+                # GUARDAMOS LOS DATOS ACTUALIZADOS DEL LIBRO EN EL ARCHIVO JSON
                 guardar_datos('data/libros.json', libros)
                 
                 print("Préstamo registrado exitosamente!")
-                libro_encontrado = True
             else:
                 print("No hay copias disponibles para préstamo....")
             break
 
     if not libro_encontrado:
         print("Libro no encontrado.")
+
+
 
 # 8. Devolver Libro
 def devolver_libro():

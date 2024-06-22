@@ -10,5 +10,17 @@
         "nombre": "BASTU",
         "direccion": "EMILIOMITRE",
         "telefono": "2040"
+    },
+    {
+        "id_socio": "1",
+        "nombre": "PIGLET",
+        "direccion": "BRASIL",
+        "telefono": "3324"
+    },
+    {
+        "id_socio": "2",
+        "nombre": "COCO",
+        "direccion": "POLOLOLO",
+        "telefono": "43432"
     }
 ]

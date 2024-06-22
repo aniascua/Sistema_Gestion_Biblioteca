@@ -68,5 +68,19 @@
         "id_socio": "01",
         "fecha_prestamo": "23-02-2020",
         "fecha_devolucion": null
+    },
+    {
+        "id_prestamo": 1,
+        "id_libro": "1",
+        "id_socio": "1",
+        "fecha_prestamo": "01",
+        "fecha_devolucion": "22-10-2021"
+    },
+    {
+        "id_prestamo": 2,
+        "id_libro": "2",
+        "id_socio": "1",
+        "fecha_prestamo": "01",
+        "fecha_devolucion": "22-10-2022"
     }
 ]
