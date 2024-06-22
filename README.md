@@ -54,6 +54,8 @@ Todo esto se realiza a través de un menú que se actualiza según las acciones 
 
 Como parte del trabajo final, se incluye una funcionalidad extra del software a criterio del alumno/grupo. Esto puede incluir el desarrollo de una interfaz gráfica, consumo de una API externa, implementación de búsquedas avanzadas, o cualquier otra funcionalidad que aporte valor agregado al sistema.
 
+## FUNCIONALIDAD ELEGIDA: ELIMINAR TODOS LOS LIBROS -> NUEVA OPCIÓN EN EL MENÚ.
+
 ## Uso del Sistema
 
 Para ejecutar el sistema en tu entorno local, sigue estos pasos:
