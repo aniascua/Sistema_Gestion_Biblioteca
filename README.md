@@ -57,5 +57,5 @@ Como parte del trabajo final, se incluye una funcionalidad extra del software a 
 
 Para ejecutar el sistema en tu entorno local, sigue estos pasos:
 
-1. Clona el repositorio desde GitHub:
+1. Clona el repositorio desde GitHub: (terminar esta parte)
 
