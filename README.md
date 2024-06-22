@@ -43,7 +43,7 @@ Todo esto se realiza a través de un menú que se actualiza según las acciones 
 
 - **Almacenamiento de Información:** Utilización de archivos JSON para almacenar los datos solicitados.
 - **Interfaces de Usuario Interactivas:** 
-Permiten:
+## Permiten:
   - Registrar, editar y eliminar libros.
   - Registrar, editar y eliminar socios.
   - Registrar préstamos y devoluciones.
