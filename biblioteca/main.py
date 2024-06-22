@@ -20,8 +20,11 @@ def mostrar_menu():
     print("11. Salir...")
 
 class Prestamo:
-    def __init__(self, id_prestamo, id_libro, id_socio, fecha_prestamo, fecha_devolucion=None):
-        self.id_prestamo = id_prestamo
+    contador_id = 0
+
+    def __init__(self, id_libro, id_socio, fecha_prestamo, fecha_devolucion=None):
+        Prestamo.contador_id += 1
+        self.id_prestamo = Prestamo.contador_id
         self.id_libro = id_libro
         self.id_socio = id_socio
         self.fecha_prestamo = fecha_prestamo
