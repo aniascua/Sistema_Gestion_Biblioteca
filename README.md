@@ -1,15 +1,10 @@
-# Trabajo Final Integrador de Programación 1 - UNER - TUDW
+# Trabajo Final Integrador de Programación 1
 
-## Sistema de Gestión de Bibliotecas en Python con Visual Studio Code
+## Sistema de Gestión de Bibliotecas #Python
 
-Este proyecto es mi trabajo final integrador del primer semestre de Programación 1 en la UNER - Tecnicatura Universitaria en Desarrollo Web (2024)
+Este proyecto es mi trabajo final integrador del primer semestre de Programación 1 en la Tecnicatura Universitaria en Desarrollo Web (UNER)
 
 Elegí desarrollar una solución de software para gestionar el préstamo y devolución de libros en una biblioteca utilizando Python en Visual Studio Code
-
-### Objetivo
-
-Desarrollar una aplicación de usuarios para gestionar el préstamo y devolución de libros en una biblioteca, permitiendo a los usuarios registrarse, eliminar su registro, solicitar préstamos de libros y devolverlos. 
-Todo esto se realiza a través de un menú que se actualiza según las acciones que realiza el usuario. Cada usuario y libro tiene un ID único para identificación
 
 ### Requerimientos del Trabajo Final Integrador TUDW 2024:
 
@@ -43,20 +38,17 @@ Todo esto se realiza a través de un menú que se actualiza según las acciones 
 ### Características del Software
 
 - **Almacenamiento de Información:** Utilización de archivos JSON para almacenar los datos solicitados.
-- **Interfaces de Usuario Interactivas:** 
-### Permiten:
+- **Interfaces de Usuario Interactivas que Permiten:** 
   - Registrar, editar y eliminar libros.
   - Registrar, editar y eliminar socios.
   - Registrar préstamos y devoluciones.
-  - Búsqueda de libros por título, género, autor y editorial.
   - Generar reportes de préstamos y devoluciones por socio, libro y rango de fechas.
 
 ### Funcionalidad Extra
 
 Como parte del trabajo final, se incluye una funcionalidad extra del software a criterio del alumno/grupo. Esto puede incluir el desarrollo de una interfaz gráfica, consumo de una API externa, implementación de búsquedas avanzadas, o cualquier otra funcionalidad que aporte valor agregado al sistema
+- Funcionalidad elegida: Nueva opción en el menú -> Eliminar todos los libros.
 
-### FUNCIONALIDAD ELEGIDA -> NUEVA OPCIÓN EN EL MENÚ: 
-**ELIMINAR TODOS LOS LIBROS.**
 Esta opción le permite al usuario borrar todos los libros de la lista de una sola vez y volver a empezar más rápido por si no quiere borrar los libros de a uno
 
 ## Uso del Sistema
