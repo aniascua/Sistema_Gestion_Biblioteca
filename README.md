@@ -2,8 +2,9 @@
 
 ## Sistema de Gestión de Bibliotecas en Python con Visual Studio Code
 
-Este proyecto es mi trabajo final integrador del primer semestre de Programación 1 en la UNER - Tecnicatura Universitaria en Desarrollo Web (2024).
-Entre las 2 opciones, elegí desarrollar una solución de software para gestionar el préstamo y devolución de libros en una biblioteca utilizando Python y sus extensiones en Visual Studio Code.
+Este proyecto es mi trabajo final integrador del primer semestre de Programación 1 en la UNER - Tecnicatura Universitaria en Desarrollo Web (2024)
+
+Elegí desarrollar una solución de software para gestionar el préstamo y devolución de libros en una biblioteca utilizando Python en Visual Studio Code
 
 ### Objetivo
 
