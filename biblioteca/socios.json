@@ -16,5 +16,32 @@
         "direccion": "Calle 1234",
         "correo_electronico": "belen@mail.com",
         "telefono": "24122"
+    },
+    {
+        "id_socio": "4",
+        "nombre": "Walden",
+        "apellido": "Schmidt",
+        "fecha_nacimiento": "1989-10-9",
+        "direccion": "LA ",
+        "correo_electronico": "walden@mail.com",
+        "telefono": "3242"
+    },
+    {
+        "id_socio": "2",
+        "nombre": "Alan",
+        "apellido": "Doe",
+        "fecha_nacimiento": "1965-4-22",
+        "direccion": "LA",
+        "correo_electronico": "alan@mail.com",
+        "telefono": "5342"
+    },
+    {
+        "id_socio": "1",
+        "nombre": "HOLA",
+        "apellido": "SOY",
+        "fecha_nacimiento": "2024-6-23",
+        "direccion": "h",
+        "correo_electronico": "h@mail.com",
+        "telefono": "344"
     }
 ]

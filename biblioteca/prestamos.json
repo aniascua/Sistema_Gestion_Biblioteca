@@ -4,7 +4,7 @@
         "id_socio": 1,
         "id_libro": 1,
         "fecha_prestamo": "2024-02-01",
-        "fecha_devolucion": "2024-02-15",
+        "fecha_devolucion": "2024-6-23",
         "estado_prestamo": "Devuelto"
     },
     {

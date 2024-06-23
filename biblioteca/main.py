@@ -175,14 +175,14 @@ def devolver_libro():
 
     prestamos = cargar_datos('prestamos.json')
     prestamo_encontrado = False
+    indices_eliminar = []
 
-    for prestamo in prestamos:
+    for index, prestamo in enumerate(prestamos):
         try:
-            if 'id_prestamo' in prestamo and str(prestamo['id_prestamo']) == id_prestamo:
+            if str(prestamo['id_prestamo']) == id_prestamo:
                 prestamo['fecha_devolucion'] = fecha_devolucion
-                prestamo['estado_prestamo'] = 'Devuelto'  # Añadir estado de préstamo
                 guardar_datos('prestamos.json', prestamos)
-
+                
                 id_libro = prestamo['id_libro']
                 libros = cargar_datos('libros.json')
                 for libro in libros:
@@ -190,12 +190,18 @@ def devolver_libro():
                         libro['cantidad_disponible'] += 1
                         guardar_datos('libros.json', libros)
                         break
-
+                
                 print("Libro devuelto exitosamente.")
                 prestamo_encontrado = True
+                indices_eliminar.append(index)
                 break
         except KeyError as e:
-            print(f"Error: KeyError - {e} en préstamo {prestamo}")
+            print(f"Error: KeyError - {e}")
+
+    if prestamo_encontrado:
+        # Eliminar préstamos marcados para eliminar
+        prestamos = [prestamo for index, prestamo in enumerate(prestamos) if index not in indices_eliminar]
+        guardar_datos('prestamos.json', prestamos)
 
     if not prestamo_encontrado:
         print("Préstamo no encontrado.")
