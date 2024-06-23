@@ -6,7 +6,7 @@
         "editorial": "Slasher",
         "a\u00f1o_publicacion": 2018,
         "genero": "Terror",
-        "cantidad_disponible": 200
+        "cantidad_disponible": 198
     },
     {
         "id_libro": 2,
@@ -15,6 +15,6 @@
         "editorial": "Slasher",
         "a\u00f1o_publicacion": 2018,
         "genero": "Terror",
-        "cantidad_disponible": 10
+        "cantidad_disponible": 11
     }
 ]
