@@ -1,3 +1,7 @@
+"""TRABAJO FINAL INTEGRADOR PROGRAMACIÓN 1
+ALUMNA: ASCUA, ANA
+TEMA ELEGIDO: SISTEMA DE GESTIÓN DE BIBLIOTECAS EN PYTHON.
+"""
 # IMPORTAMOS LAS FUNCIONES Y CLASES NECESARIAS
 from utils import cargar_datos, guardar_datos, inicializar_datos  # Funciones para manejar archivos JSON e inicializar datos
 from libro import Libro  # Clase para representar libros
