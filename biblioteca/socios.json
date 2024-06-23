@@ -18,15 +18,6 @@
         "telefono": "24122"
     },
     {
-        "id_socio": "5",
-        "nombre": "HOLA",
-        "apellido": "SOY",
-        "fecha_nacimiento": "2024-6-23",
-        "direccion": "h",
-        "correo_electronico": "h@mail.com",
-        "telefono": "344"
-    },
-    {
         "id_socio": "6",
         "nombre": "NUEVO",
         "apellido": "SOCIO",
@@ -34,14 +25,5 @@
         "direccion": "PRUEBA",
         "correo_electronico": "PRUEBA@mail.com",
         "telefono": "42"
-    },
-    {
-        "id_socio": "7",
-        "nombre": "NUEVO SOCIO 2",
-        "apellido": "NUEVO SOCIO 2",
-        "fecha_nacimiento": "2023-2-4",
-        "direccion": "hola",
-        "correo_electronico": "q@mail.com",
-        "telefono": "323"
     }
 ]
