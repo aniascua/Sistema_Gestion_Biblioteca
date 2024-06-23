@@ -4,6 +4,12 @@ from libro import Libro  # Clase para representar libros
 from socio import Socio  # Clase para representar socios
 from prestamo import Prestamo  # Clase para representar préstamos
 
+# DEFINIMOS LAS RUTAS DE LOS ARCHIVOS JSON
+DATA_PATH_LIBROS = 'libros.json'
+DATA_PATH_SOCIOS = 'socios.json'
+DATA_PATH_PRESTAMOS = 'prestamos.json'
+
+# MENÚ PRINCIPAL
 def mostrar_menu():
     """FUNCIÓN PARA MOSTRAR EL MENÚ PRINCIPAL"""
     print("\n*** Sistema de Gestión de Biblioteca ***")
@@ -60,7 +66,7 @@ def editar_libro():
         guardar_datos('libros.json', libros)
         print("Libro editado exitosamente!")
     else:
-        print("Libro no encontrado.")
+        print("Libro no encontrado...")
 
 # 3. Eliminar Libro
 def eliminar_libro():
@@ -82,11 +88,12 @@ def registrar_socio():
     correo_electronico = input("Correo electrónico: ")
     telefono = input("Teléfono: ")
 
+    socios = cargar_datos(DATA_PATH_SOCIOS)
+    Socio.actualizar_contador(socios)
+
     socio = Socio(nombre, apellido, fecha_nacimiento, direccion, correo_electronico, telefono)
-    
-    socios = cargar_datos('socios.json')
     socios.append(socio.to_dict())
-    guardar_datos('socios.json', socios)
+    guardar_datos(DATA_PATH_SOCIOS, socios)
     
     print("Socio registrado exitosamente!")
 
@@ -100,7 +107,7 @@ def editar_socio():
     print(socios)  # Agregar esta línea para verificar qué socios se están cargando
     
     socio_encontrado = False
-
+    # BÚCLE FOR QUE ITERA EN LOS SOCIOS PARA BUSCARLO Y LE PERMITE AL USUARIO EDITAR LOS DATOS PREVIAMENTE INGRESADOS
     for socio in socios:
         if socio['id_socio'] == id_socio:
             socio['nombre'] = input(f"Nombre ({socio['nombre']}): ") or socio['nombre']
@@ -117,7 +124,6 @@ def editar_socio():
         print("Socio editado exitosamente!")
     else:
         print("Socio no encontrado.")
-
 
 # 6. Eliminar Socio
 def eliminar_socio():
@@ -136,7 +142,7 @@ def eliminar_socio():
     # Guardar los datos actualizados en el archivo JSON
     guardar_datos('socios.json', socios_actualizados)
     
-    print(f"Socio con ID {id_socio_a_eliminar} eliminado correctamente.")
+    print(f"Socio con ID {id_socio_a_eliminar} eliminado correctamente!")
 
 # 7. Registrar Préstamo
 def registrar_prestamo():
@@ -161,11 +167,11 @@ def registrar_prestamo():
                 print("Préstamo registrado exitosamente!")
                 libro_encontrado = True
             else:
-                print("No hay copias disponibles para préstamo.")
+                print("No hay copias disponibles para préstamo...")
             break
 
     if not libro_encontrado:
-        print("Libro no encontrado.")
+        print("Libro no encontrado...")
 
 # 8. Devolver Libro
 def devolver_libro():
@@ -204,7 +210,7 @@ def devolver_libro():
         guardar_datos('prestamos.json', prestamos)
 
     if not prestamo_encontrado:
-        print("Préstamo no encontrado.")
+        print("Préstamo no encontrado...")
 
 # 9. Listar Libros
 def listar_libros():
@@ -214,7 +220,7 @@ def listar_libros():
         for libro in libros:
             print(f"ID: {libro['id_libro']}, Título: {libro['titulo']}, Autor: {libro['autor']}, Editorial: {libro['editorial']}, Año: {libro['año_publicacion']}, Género: {libro['genero']}, Disponible: {libro['cantidad_disponible']}")
     else:
-        print("No hay libros registrados.")
+        print("No hay libros registrados...")
 
 # 10. Listar Socios
 def listar_socios():
@@ -224,14 +230,14 @@ def listar_socios():
         for socio in socios:
             print(f"ID: {socio['id_socio']}, Nombre: {socio['nombre']}, Apellido: {socio['apellido']}, Fecha de nacimiento: {socio['fecha_nacimiento']}, Dirección: {socio['direccion']}, Correo electrónico: {socio['correo_electronico']}, Teléfono: {socio['telefono']}")
     else:
-        print("No hay socios registrados.")
+        print("No hay socios registrados...")
 
 # 11. Eliminar Todos los Libros
 def eliminar_todos_libros():
     """FUNCIÓN PARA ELIMINAR TODOS LOS LIBROS DEL SISTEMA"""
     libros = []
     guardar_datos('libros.json', libros)
-    print("Todos los libros fueron eliminados del sistema.")
+    print("Todos los libros fueron eliminados del sistema...")
 
 # FUNCION PRINCIPAL
 def main():
@@ -263,12 +269,12 @@ def main():
         elif opcion == '10':
             listar_socios()
         elif opcion == '11':
-            print("Saliendo del sistema... ¡Hasta luego!")
+            print("Saliendo del sistema... Gracias!")
             break
         elif opcion == '12':
             eliminar_todos_libros()
         else:
-            print("Opción no válida. Inténtalo nuevamente.")
+            print("Opción no válida. Intentalo nuevamente.")
 
 if __name__ == "__main__":
     main()

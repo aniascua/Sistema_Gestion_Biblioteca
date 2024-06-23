@@ -1,3 +1,5 @@
+# socio.py
+
 class Socio:
     contador_id = 0
 

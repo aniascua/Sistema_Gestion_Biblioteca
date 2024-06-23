@@ -9,7 +9,7 @@
         "telefono": "21231"
     },
     {
-        "id_socio": "3",
+        "id_socio": "2",
         "nombre": "Belen",
         "apellido": "Mica",
         "fecha_nacimiento": "1991-12-14",
@@ -18,30 +18,30 @@
         "telefono": "24122"
     },
     {
-        "id_socio": "4",
-        "nombre": "Walden",
-        "apellido": "Schmidt",
-        "fecha_nacimiento": "1989-10-9",
-        "direccion": "LA ",
-        "correo_electronico": "walden@mail.com",
-        "telefono": "3242"
-    },
-    {
-        "id_socio": "2",
-        "nombre": "Alan",
-        "apellido": "Doe",
-        "fecha_nacimiento": "1965-4-22",
-        "direccion": "LA",
-        "correo_electronico": "alan@mail.com",
-        "telefono": "5342"
-    },
-    {
-        "id_socio": "1",
+        "id_socio": "5",
         "nombre": "HOLA",
         "apellido": "SOY",
         "fecha_nacimiento": "2024-6-23",
         "direccion": "h",
         "correo_electronico": "h@mail.com",
         "telefono": "344"
+    },
+    {
+        "id_socio": "6",
+        "nombre": "NUEVO",
+        "apellido": "SOCIO",
+        "fecha_nacimiento": "2024-5-2",
+        "direccion": "PRUEBA",
+        "correo_electronico": "PRUEBA@mail.com",
+        "telefono": "42"
+    },
+    {
+        "id_socio": "7",
+        "nombre": "NUEVO SOCIO 2",
+        "apellido": "NUEVO SOCIO 2",
+        "fecha_nacimiento": "2023-2-4",
+        "direccion": "hola",
+        "correo_electronico": "q@mail.com",
+        "telefono": "323"
     }
 ]
