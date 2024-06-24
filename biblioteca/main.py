@@ -36,7 +36,6 @@ def mostrar_menu():
 
 # 1. Registrar Libro
 def registrar_libro():
-    """FUNCIÓN PARA REGISTRAR UN NUEVO LIBRO EN EL SISTEMA"""
     titulo = input("Título: ")
     autor = input("Autor: ")
     editorial = input("Editorial: ")
@@ -45,11 +44,11 @@ def registrar_libro():
     cantidad_disponible = int(input("Cantidad disponible: "))
 
     libro = Libro(titulo, autor, editorial, anio_publicacion, genero, cantidad_disponible)
-    
+
     libros = cargar_datos(DATA_PATH_LIBROS)
     libros.append(libro.to_dict())
     guardar_datos(DATA_PATH_LIBROS, libros)
-    
+
     print("Libro registrado exitosamente!")
 
 # 2. Editar Libro
@@ -215,12 +214,11 @@ def listar_libros():
     libros = cargar_datos(DATA_PATH_LIBROS)
     if libros:
         for libro in libros:
-            # Asegurarse de que todas las claves necesarias estén presentes en el diccionario del libro
             id_libro = libro.get('id_libro', 'Desconocido')
             titulo = libro.get('titulo', 'Desconocido')
             autor = libro.get('autor', 'Desconocido')
             editorial = libro.get('editorial', 'Desconocido')
-            anio_publicacion = libro.get('anio_publicacion', 'Desconocido')
+            anio_publicacion = libro.get('anio_publicacion', 'Desconocido') 
             genero = libro.get('genero', 'Desconocido')
             cantidad_disponible = libro.get('cantidad_disponible', 'Desconocido')
 
