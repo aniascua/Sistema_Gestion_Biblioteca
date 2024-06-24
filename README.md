@@ -39,9 +39,10 @@ Elegí desarrollar una solución de software para gestionar el préstamo y devol
 
 - **Almacenamiento de Información:** Utilización de archivos JSON para almacenar los datos solicitados.
 - **Interfaces de Usuario Interactivas que Permiten:** 
-  - Registrar, editar y eliminar libros.
-  - Registrar, editar y eliminar socios.
-  - Registrar préstamos y devoluciones.
+  - Registrar, editar y eliminar libros ✅
+  - Registrar, editar y eliminar socios ✅
+  - Registrar préstamos y devoluciones ✅
+  - Búsqueda de libros por título, género, autor y editorial ✅
   - Generar reportes de préstamos y devoluciones por socio, libro y rango de fechas.
 
 ### Funcionalidad Extra
