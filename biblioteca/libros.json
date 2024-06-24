@@ -16,5 +16,32 @@
         "a\u00f1o_publicacion": 2018,
         "genero": "Terror",
         "cantidad_disponible": 10
+    },
+    {
+        "id_libro": 3,
+        "titulo": "Halloween",
+        "autor": "Strode",
+        "editorial": "Slasher",
+        "a\u00f1o_publicacion": 1979,
+        "genero": "Terror",
+        "cantidad_disponible": 30
+    },
+    {
+        "id_libro": 4,
+        "titulo": "Viernes 13",
+        "autor": "Voorhees",
+        "editorial": "Slasher",
+        "a\u00f1o_publicacion": 1980,
+        "genero": "Terror",
+        "cantidad_disponible": 25
+    },
+    {
+        "id_libro": 5,
+        "titulo": "My Bloody Valentine",
+        "autor": "Mihalka",
+        "editorial": "Slasher",
+        "a\u00f1o_publicacion": 1981,
+        "genero": "Terror",
+        "cantidad_disponible": 18
     }
 ]
