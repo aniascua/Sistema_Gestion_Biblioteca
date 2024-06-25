@@ -13,6 +13,14 @@ DATA_PATH_LIBROS = 'libros.json'
 DATA_PATH_SOCIOS = 'socios.json'
 DATA_PATH_PRESTAMOS = 'prestamos.json'
 
+def obtener_siguiente_id_libro():
+    libros = cargar_datos(DATA_PATH_LIBROS)
+    if libros:
+        return max(libro['id_libro'] for libro in libros) + 1
+    else:
+        return 1  # Si no hay libros registrados, empezamos desde el ID 1
+
+
 # MENÚ PRINCIPAL
 def mostrar_menu():
     """FUNCIÓN PARA MOSTRAR EL MENÚ PRINCIPAL"""
@@ -43,8 +51,10 @@ def registrar_libro():
     genero = input("Género: ")
     cantidad_disponible = int(input("Cantidad disponible: "))
 
-    libro = Libro(titulo, autor, editorial, anio_publicacion, genero, cantidad_disponible)
+    id_libro = obtener_siguiente_id_libro()  # Obtener el siguiente ID disponible
 
+    libro = Libro(id_libro, titulo, autor, editorial, anio_publicacion, genero, cantidad_disponible)
+    
     libros = cargar_datos(DATA_PATH_LIBROS)
     libros.append(libro.to_dict())
     guardar_datos(DATA_PATH_LIBROS, libros)
