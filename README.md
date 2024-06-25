@@ -17,7 +17,7 @@ Elegí desarrollar una solución de software para gestionar el préstamo y devol
    - Género
    - Cantidad Disponible
 
-2. **Gestión de Socios:**
+2. **Gestión de Socios 🗂️**
    - ID de Socio (número único y autoincremental)
    - Nombre
    - Apellido
