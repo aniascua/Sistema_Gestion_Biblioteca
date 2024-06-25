@@ -4,7 +4,7 @@
         "titulo": "Scream",
         "autor": "Campbell",
         "editorial": "Slasher",
-        "a\u00f1o_publicacion": 2018,
+        "a\u00c3\u00b1o_publicacion": 2018,
         "genero": "Terror",
         "cantidad_disponible": 200
     },
@@ -13,7 +13,7 @@
         "titulo": "Terrifier",
         "autor": "Clown",
         "editorial": "Slasher",
-        "a\u00f1o_publicacion": 2018,
+        "a\u00c3\u00b1o_publicacion": 2018,
         "genero": "Terror",
         "cantidad_disponible": 10
     },
@@ -22,7 +22,7 @@
         "titulo": "Halloween",
         "autor": "Strode",
         "editorial": "Slasher",
-        "a\u00f1o_publicacion": 1979,
+        "a\u00c3\u00b1o_publicacion": 1979,
         "genero": "Terror",
         "cantidad_disponible": 30
     },
@@ -31,7 +31,7 @@
         "titulo": "Viernes 13",
         "autor": "Voorhees",
         "editorial": "Slasher",
-        "a\u00f1o_publicacion": 1980,
+        "a\u00c3\u00b1o_publicacion": 1980,
         "genero": "Terror",
         "cantidad_disponible": 25
     },
@@ -40,8 +40,26 @@
         "titulo": "My Bloody Valentine",
         "autor": "Mihalka",
         "editorial": "Slasher",
-        "a\u00f1o_publicacion": 1981,
+        "a\u00c3\u00b1o_publicacion": 1981,
         "genero": "Terror",
         "cantidad_disponible": 18
+    },
+    {
+        "id_libro": 6,
+        "titulo": "Caza fantasmas",
+        "autor": "Libros",
+        "editorial": "Ghostbusters",
+        "a\u00f1o_publicacion": 2020,
+        "genero": "Terror",
+        "cantidad_disponible": 10
+    },
+    {
+        "id_libro": 7,
+        "titulo": "j",
+        "autor": "j",
+        "editorial": "j",
+        "a\u00f1o_publicacion": 2020,
+        "genero": "j",
+        "cantidad_disponible": 2
     }
 ]
