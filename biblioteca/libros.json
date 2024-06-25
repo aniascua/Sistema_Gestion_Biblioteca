@@ -4,16 +4,16 @@
         "titulo": "Scream",
         "autor": "Campbell",
         "editorial": "Slasher",
-        "a\u00c3\u00b1o_publicacion": 2018,
+        "anio_publicacion": 2018,
         "genero": "Terror",
-        "cantidad_disponible": 200
+        "cantidad_disponible": 201
     },
     {
         "id_libro": 2,
         "titulo": "Terrifier",
         "autor": "Clown",
         "editorial": "Slasher",
-        "a\u00c3\u00b1o_publicacion": 2018,
+        "anio_publicacion": 2018,
         "genero": "Terror",
         "cantidad_disponible": 10
     },
@@ -22,7 +22,7 @@
         "titulo": "Halloween",
         "autor": "Strode",
         "editorial": "Slasher",
-        "a\u00c3\u00b1o_publicacion": 1979,
+        "anio_publicacion": 1979,
         "genero": "Terror",
         "cantidad_disponible": 30
     },
@@ -31,7 +31,7 @@
         "titulo": "Viernes 13",
         "autor": "Voorhees",
         "editorial": "Slasher",
-        "a\u00c3\u00b1o_publicacion": 1980,
+        "anio_publicacion": 1980,
         "genero": "Terror",
         "cantidad_disponible": 25
     },
@@ -40,7 +40,7 @@
         "titulo": "My Bloody Valentine",
         "autor": "Mihalka",
         "editorial": "Slasher",
-        "a\u00c3\u00b1o_publicacion": 1981,
+        "anio_publicacion": 1981,
         "genero": "Terror",
         "cantidad_disponible": 18
     },
@@ -49,17 +49,17 @@
         "titulo": "Caza fantasmas",
         "autor": "Libros",
         "editorial": "Ghostbusters",
-        "a\u00f1o_publicacion": 2020,
+        "anio_publicacion": 2020,
         "genero": "Terror",
         "cantidad_disponible": 10
     },
     {
         "id_libro": 7,
-        "titulo": "j",
-        "autor": "j",
-        "editorial": "j",
-        "a\u00f1o_publicacion": 2020,
-        "genero": "j",
-        "cantidad_disponible": 2
+        "titulo": "Cocina",
+        "autor": "Cuisine",
+        "editorial": "Company",
+        "anio_publicacion": 2000,
+        "genero": "Cooking",
+        "cantidad_disponible": 100
     }
 ]
