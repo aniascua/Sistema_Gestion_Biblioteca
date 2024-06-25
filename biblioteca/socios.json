@@ -18,12 +18,12 @@
         "telefono": "24122"
     },
     {
-        "id_socio": "6",
-        "nombre": "NUEVO",
-        "apellido": "SOCIO",
-        "fecha_nacimiento": "2024-5-2",
-        "direccion": "PRUEBA",
-        "correo_electronico": "PRUEBA@mail.com",
-        "telefono": "42"
+        "id_socio": "3",
+        "nombre": "SOCIO 3",
+        "apellido": "SOCIO 3",
+        "fecha_nacimiento": "2024-6-25",
+        "direccion": "SOCIO 3",
+        "correo_electronico": "socio3@mail.com",
+        "telefono": "3"
     }
 ]
